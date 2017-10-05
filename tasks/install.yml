@@ -13,7 +13,7 @@
     group: root
 
 - name: Download JDK tarball
-  local_action: get_url url="{{ java_remote_source_url }}/{{ java_archive }}" dest="{{ java_staging_dir }}/{{ java_archive }}"
+  local_action: get_url url="{{ java_remote_source_url }}/{{ java_archive }}" dest="{{ java_staging_dir }}/{{ java_archive }}" headers="Cookie:gpw_e24=http\%3A\%2F\%2Fwww.oracle.com\%2F;oraclelicense=accept-securebackup-cookie"
   become: False
   run_once: True
 
